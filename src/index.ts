@@ -12,11 +12,11 @@ const app = express();
 app.use(json());
 
 app.use('/api/auth', authRoutes);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.get('/api-docs-json', ((_req, res): ReturnType<RequestHandler> => {
-  res.json(swaggerSpec);
-  return;
-}));
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+// app.get('/api-docs-json', ((_req, res): ReturnType<RequestHandler> => {
+//   res.json(swaggerSpec);
+//   return;
+// }));
 
 app.use(responseFormatter);
 
